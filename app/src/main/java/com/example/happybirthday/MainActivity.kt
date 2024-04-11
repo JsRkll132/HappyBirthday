@@ -3,6 +3,7 @@ package com.example.happybirthday
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -42,7 +43,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingText(message:String,from:String ,modifier: Modifier = Modifier){
 
-    Column(modifier = modifier) {
+    Column(verticalArrangement = Arrangement.Center,
+        modifier = modifier) {
         Text(
             text = message,
             fontSize = 100.sp,
